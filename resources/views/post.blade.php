@@ -6,13 +6,17 @@
       <article>
         <h2 class="text-4xl mt-10">{{ $post->title }}</h2>
         <h5 class="text-xl mt-4">By. <a href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a> in <a href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a></h5>
-        <img class="rounded-2xl py-2" src="https://source.unsplash.com/1200x400/?{{ $post->category->name }}" alt="Post image">
+        @if( $post->image )
+          <img class="rounded-2xl py-2 max-w-[1200px] max-h-[400px] overflow-hidden" src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">
+        @else
+          <img class="rounded-2xl py-2" src="https://source.unsplash.com/1200x400/?{{ $post->category->name }}" alt="Post image">
+        @endif
         <div class="mt-2">{!! $post->body !!}</div>
       </article>
       <p class="mt-10">
         <a href="/posts">Back to Posts</a>
       </p>
     </div>
-  </div>
+</div>
   
 @endsection

@@ -28,9 +28,15 @@
             <div class="mx-auto px-6 lg:px-8">
                 <div class="mx-auto lg:mx-0">
                     <article class="bg-white shadow-md shadow-sky-100 p-4 sm:p-8 rounded-md mb-4 flex items-center justify-center">
-                        <a href="/posts/{{ $posts[0]->slug }}">
-                            <img class="w-full rounded-xl max-sm:hidden" src="https://source.unsplash.com/256x256/?{{ $posts[0]->category->name }}" alt="Post image">
-                        </a>
+                        @if( $posts[0]->image )
+                            <a href="/posts/{{ $posts[0]->slug }}">
+                                <img class="w-full rounded-xl max-sm:hidden max-w-[256px] max-h-[256px] overflow-hidden" src="{{ asset('storage/' . $posts[0]->image) }}" alt="{{ $posts[0]->category->name }}">
+                            </a>
+                        @else
+                            <a href="/posts/{{ $posts[0]->slug }}">
+                                <img class="w-full rounded-xl max-sm:hidden" src="https://source.unsplash.com/256x256/?{{ $posts[0]->category->name }}" alt="Post image">
+                            </a>
+                        @endif
                         <div class="ml-4">
                             <div class="text-xs">
                                 <div class="absolute top-[275px] ml-4">
@@ -67,7 +73,15 @@
             <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 @foreach ($posts->skip(1) as $post)
                     <article class="flex max-w-xl flex-col items-start justify-between">
-                        <a href="/posts/{{ $post->slug }}"><img class="w-full rounded-xl" src="https://source.unsplash.com/500x300/?{{ $post->category->name }}" alt="Post image"></a>
+                        @if( $post->image )
+                            <a href="/posts/{{ $post->slug }}">
+                                <img class="rounded-xl max-w-[500px] max-h-[300px] overflow-hidden" src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">
+                            </a>
+                        @else
+                            <a href="/posts/{{ $post->slug }}">
+                                <img class="w-full rounded-xl" src="https://source.unsplash.com/500x300/?{{ $post->category->name }}" alt="Post image">
+                            </a>
+                        @endif
                         <div class="flex items-center gap-x-4 text-xs pt-4">
                             <time datetime="2020-03-16" class="text-gray-500">{{ $post->created_at->diffForHumans() }}</time>
                             <a href="/posts?category={{ $post->category->slug }}" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{ $post->category->name }}</a>

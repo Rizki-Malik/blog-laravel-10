@@ -10,11 +10,11 @@
     <header class="bg-cyan-500">
         @include('layouts.partials.navbar')
     </header>
-
     <div class="container mx-auto">
         @yield('container')
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

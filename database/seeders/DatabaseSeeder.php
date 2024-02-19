@@ -22,11 +22,12 @@ class DatabaseSeeder extends Seeder
             //     'email' => 'test@example.com',
             // ]);
         User::create([
-            'name' => 'Rizki Malik',
-            'username' => 'rimali',
+            'name' => 'Muhammad Rizki Malik Aziz',
+            'username' => 'Rizki Malik',
             'email' => 'rimali.qwerty@gmail.com',
-            'password' => bcrypt('12345'),
+            'password' => bcrypt('123456'),
         ]);
+        
         User::factory(5)->create();
         
         Category::create([
@@ -75,6 +76,6 @@ class DatabaseSeeder extends Seeder
             'user_id' =>2,
         ]);
 
-        Post::factory(20)->create();
+        Post::factory(50)->create();
     }
 }

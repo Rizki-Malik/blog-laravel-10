@@ -11,7 +11,8 @@ class RegisterController extends Controller
     public function index(){
         return view('portals.register', [
             'title' => 'Register',
-            'active' => 'register'
+            'active' => 'register',
+            'logo_nav' => 'logo-red.png',
         ]);
     }
 
@@ -26,6 +27,6 @@ class RegisterController extends Controller
 
         User::create($validatedData);
         
-        return redirect('/login')->with('success', 'You have successfully registered your account.!');;
+        return redirect('/login')->with('success', 'You have successfully registered your account!');
     }
 }
