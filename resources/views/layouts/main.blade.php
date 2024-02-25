@@ -7,7 +7,7 @@
     <title>Rizki Malik - Blog | {{ $title }}</title>
 </head>
 <body>
-    <header class="bg-cyan-500">
+    <header class="bg-[#50C4ED]">
         @include('layouts.partials.navbar')
     </header>
     <div class="container mx-auto">

@@ -17,7 +17,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.index', [
             "title" => "Dashboard",
-            "logo_nav" => "/img/logo-red.png",
+            "logo_nav" => "/img/logo-white-dashboard.png",
             "image" => "pp.png",
             "posts" => Post::where('user_id', auth()->user()->id)->paginate(10),
         ]);
@@ -30,7 +30,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.create', [
             "title" => 'Create New Post',
-            "logo_nav" => "/img/logo-red.png",
+            "logo_nav" => "/img/logo-white-dashboard.png",
             "categories" => Category::all(),
         ]);
     }
@@ -67,7 +67,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.show', [
             'post' => $post,
-            "logo_nav" => "/img/logo-red.png",
+            "logo_nav" => "/img/logo-white-dashboard.png",
             'title' => 'Dashboard Post'
         ]);
     }
@@ -79,7 +79,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.edit',[
             'post' => $post,
-            "logo_nav" => "/img/logo-red.png",
+            "logo_nav" => "/img/logo-white-dashboard.png",
             'title' => 'Dashboard Edit Post',
             "categories" => Category::all(),
         ]);

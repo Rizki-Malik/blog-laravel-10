@@ -23,7 +23,7 @@ class PostController extends Controller
         return view('posts', [
             "title" => "Post Up to Date" . $title,
             "active" => "blog",
-            "logo_nav" => "img/logo-red.png",
+            "logo_nav" => "img/logo-white.png",
             "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(7)->WithQueryString()
         ]);
     }
@@ -32,7 +32,7 @@ class PostController extends Controller
         return view('post', [
             "title" => "Post",
             "active" => "blog",
-            "logo_nav" => "img/logo-red.png",
+            "logo_nav" => "img/logo-white.png",
             "post" => $post
         ]);
     }

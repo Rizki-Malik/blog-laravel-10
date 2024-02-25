@@ -1,7 +1,7 @@
 <nav class="mx-auto flex max-w-screen-2xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
         <a href="/" >
-            <img class="h-12" src="{{ $logo_nav }}" alt="Logo">
+            <img class="h-12" src="{{ asset( $logo_nav ) }}" alt="Logo">
         </a>
     </div>
     <div class="flex lg:hidden">
@@ -25,8 +25,7 @@
                 <div>
                   <button type="button" class="inline-flex w-full justify-center rounded-md" id="menu-button" aria-expanded="false" aria-haspopup="true">
                         <div class="flex justify-center items-center">
-                            {{-- <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="img/pp.png" alt={{ auth()->user()->name }}"/> --}}
-                            <div class="text-lg mr-1 text-white">Welcome, {{ auth()->user()->username }}</div>
+                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="{{ asset('img/pp.png') }}" alt={{ auth()->user()->name }}"/>
                             <svg class="-mr-1 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg>

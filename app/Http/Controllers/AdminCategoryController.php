@@ -16,7 +16,7 @@ class AdminCategoryController extends Controller
         return view('dashboard.categories.index', [
             'categories' => Category::all(),
             "title" => "Categories",
-            "logo_nav" => "/img/logo-red.png",
+            "logo_nav" => "/img/logo-white-dashboard.png",
             "image" => "pp.png",
         ]);
     }

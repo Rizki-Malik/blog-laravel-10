@@ -23,7 +23,7 @@ use App\Http\Controllers\DashboardPostController;
 Route::get('/', function () {
     return view('home', [
         "title" => "Beranda",
-        "logo_nav" => "img/logo-red.png",
+        "logo_nav" => "img/logo-white.png",
     ]);
 });
 
@@ -32,7 +32,7 @@ Route::get('/about', function () {
         "name" => "Muhammad Rizki Malik Aziz",
         "email" => "rimali.qwerty@gmail.com",
         "image" => "img/pp.png",
-        "logo_nav" => "img/logo-red.png",
+        "logo_nav" => "img/logo-white.png",
         "logo" => "img/logo.png",
         "title" => "Tentang",
     ]);
@@ -47,7 +47,7 @@ Route::get('/categories', function() {
     return view('categories', [
         'title' => 'Post Categories',
         'categories' => Category::all(),
-        "logo_nav" => "img/logo-red.png",
+        "logo_nav" => "img/logo-white.png",
     ]);
 });
 
@@ -62,7 +62,7 @@ Route::get('/dashboard', function(){
     return view('dashboard.index', [
         "title" => "Dashboard",
         "image" => "pp.png",
-        "logo_nav" => "img/logo-red.png",
+        "logo_nav" => "img/logo-white-dashboard.png",
     ]);
 })->middleware('auth');
 
