@@ -12,7 +12,8 @@ class RegisterController extends Controller
         return view('portals.register', [
             'title' => 'Register',
             'active' => 'register',
-            'logo_nav' => 'logo-red.png',
+            'logo_nav' => '/img/logo-white.png',
+            "logo" => "img/logo.png",
         ]);
     }
 

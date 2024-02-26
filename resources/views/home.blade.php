@@ -1,19 +1,18 @@
 @extends('layouts.main')
 @section('container')
-
 <!-- Hero Section Start -->
 
-<section id="home" class=" dark:bg-dark ">
+<section id="home" class="dark:bg-dark">
     <div class="container relative isolate overflow-hidden m-20 mx-auto ml-20">
         <div class="flex flex-wrap">
-            <div class="w-full self-center px-4 lg:w-1/2">
+            <div class="w-full self-center px-4 lg:w-1/2 select-none">
                 <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
                 <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
-                <h1 class="text-base font-semibold text-primary md:text-xl">Halo Semua 👋, saya <span class="block font-bold text-dark text-4xl md:text-3xl mt-1 dark:text-white">Muhammad Rizki Malik Aziz</span></h1>
-                <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Lecturer & <span class="text-dark dark:text-slate-100">Web Developer</span></h2>
-                <p class="font-semibold text-lg text-secondary leading-relaxed">Melatih Logika dengan <span class="text-blue-900"> Pemrograman</span>, Moral dengan <span class="text-emerald-900">Agama</span>, <div class="font-semibold text-lg text-secondary leading-relaxed pb-12">Kebugaran dengan <span class="text-amber-900">Gym</span>.</div></p>
+                <h1 class="text-base font-semibold text-primary md:text-xl">Hello and welcome 👋, I'm <span class="block font-bold text-dark text-4xl md:text-3xl  mt-1 dark:text-white">Muhammad Rizki Malik Aziz</span></h1>
+                <h2 class="font-medium text-teal-500 text-lg mb-5 lg:text-2xl">Cyber Security & <span class="text-dark dark:text-slate-100">Web Developer</span></h2>
+                <p class="font-semibold text-lg text-secondary leading-relaxed">Training Logic with <span class="text-blue-900"> Programming</span>, Morality with <span class="text-emerald-900">Islam</span>, <div class="font-semibold text-lg text-secondary leading-relaxed pb-12">Fitness with  <span class="text-amber-900">the Gym</span>.</div></p>
                 
-                <a href="#contact" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Hubungi Saya</a>
+                <a href="#contact" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Contact Me</a>
             </div>
 
             <div class="w-full self-end px-4 lg:w-1/2">
@@ -22,7 +21,7 @@
                     <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 sm:scale-125 min-[0px]:scale-0">
                         <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#50C4ED" d="M41.6,-46.9C57.3,-36.3,75.9,-26.5,81.6,-11.8C87.2,2.9,80,22.4,67.5,34.2C55,45.9,37.3,49.9,19.6,58.1C2,66.4,-15.7,78.9,-32.3,77.6C-48.8,76.4,-64.4,61.3,-69.9,44.1C-75.3,26.9,-70.6,7.6,-63.1,-7C-55.7,-21.7,-45.4,-31.8,-34.4,-43.2C-23.4,-54.6,-11.7,-67.3,0.6,-68.1C12.9,-68.8,25.8,-57.5,41.6,-46.9Z" transform="translate(100 100)" />
-                          </svg>
+                        </svg>
                     </span>
                 </div>
             </div>
@@ -31,19 +30,20 @@
 </section>
 
 <!-- Hero Section End -->
-<!-- About Section Start -->
+<!-- Contact Section Start -->
 
-<section id="about" class="pt-36 pb-32 dark:bg-dark">
-    <div class="container my-24 ml-20">
+<section id="contact" class="py-72 dark:bg-dark">
+    <div class="container ml-10">
         <div class="flex flex-wrap">
             <div class="w-full px-4 mb-10 lg:w-1/2">
-                <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
-                <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Belajar Pemrograman adalah salah satu investasi terbaik pada diri sendiri.</h2>
-                <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Masa Depan yang cerah adalah dimana manusia berlomba-lomba dalam kebaikan dan para remaja membutuhkan pembimbing pada jalur perlombaan tersebut. Maka saya Bertujuan membantu pemuda pemudi Indonesia menjadi lebih produktif dan kreatif melalui pemrograman. </p>
+                <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
+                <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Learning programming is one of the best investments in oneself.</h2>
+                <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
+                    A bright future is when people compete in goodness, where young people need guidance on that path. My goal is to assist Indonesian youth to become more productive and creative through programming.</p>
             </div>
             <div class="w-full px-4 lg:w-1/2">
-                <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman</h3>
-                <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Ikuti Perjalanan saya dalam Sosial Media yang lainnya 👍</p>
+                <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Allow me to extend an invitation for a closer connection.</h3>
+                <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Follow my journey on various social media platforms for more insights and updates. Your engagement is greatly appreciated. 👍</p>
                 <div class="flex items-center">
                     <!-- Instagram -->
                     <a href="https://www.instagram.com/rizkimalik22/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300 transition duration-200 ease-in-out">
@@ -80,6 +80,5 @@
 </section>
 
 <!-- About Section End -->
-
 
 @endsection

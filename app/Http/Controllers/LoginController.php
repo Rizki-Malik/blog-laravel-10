@@ -12,7 +12,8 @@ class LoginController extends Controller
     {
         return view('portals.login', [
             'title' => 'Login',
-            "logo_nav" => "img/logo-red.png",
+            "logo_nav" => "img/logo-white.png",
+            "logo" => "img/logo.png",
         ]);   
     }
 
@@ -32,7 +33,7 @@ class LoginController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        return back()->with('loginErr', 'Login Failed!');
+        return back()->with('loginErr', 'Incorrect email or password. Please try again.');
     }
 
     public function logout()
