@@ -139,7 +139,6 @@
             </a>    
         </li>
     </ul>
-    @can('admin')
         <div class="text-gray-500 whitespace-pre-line dark:text-gray-500 border-gray-200 dark:border-gray-700 text-xl text-center px-3 mt-4 mb-1 border-t py-1">
             <span>Administrator</span>
         </div>
@@ -169,7 +168,6 @@
     </ul>
 
     </div>
-    @endcan
 <div
     class="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20"
     >

@@ -23,18 +23,19 @@
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <div class="relative inline-block text-left">
                 <div>
-                  <button type="button" class="inline-flex w-full justify-center rounded-md" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                  <button type="button" class="inline-flex w-full justify-center rounded-md group" id="menu-button" aria-expanded="false" aria-haspopup="true">
                         <div class="flex justify-center items-center">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="{{ asset('img/pp.png') }}" alt={{ auth()->user()->name }}"/>
+                            <img class="inline-block h-8 w-8 rounded-full bg-white ring-2 ring-white group-active:ring-cyan-200" src="{{ asset('img/pp.png') }}" alt={{ auth()->user()->name }}"/>
                             <svg class="-mr-1 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg>
                         </div>
                   </button>
                 </div>
-              
+                
                 <div class="absolute right-0 z-10 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" id="dropdown-menu">
                   <div class="py-1" role="none">
+                    @can('admin')
                     <a href="/dashboard" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 focus:bg-gray-100 focus:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-0">
                         <div class="flex justify-start items-start">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -45,16 +46,17 @@
                             </div>
                         </div>
                     </a>
-                    
+                    @endcan
                   </div>
                   <div class="py-1" role="none">
                     <form action="/logout" method="POST">
                         @csrf
                         <button type="submit" class="text-gray-700 block w-full py-2 text-sm hover:bg-gray-100 focus:bg-gray-100 focus:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-6">
                             <div class="flex justify-start items-start mx-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                                </svg> 
+                                
                                 Log Out
                             </div>
                         </button>
@@ -67,12 +69,12 @@
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="/login" class="text-sm font-semibold leading-6 {{ Request::is('login') ? 'text-blue-800' : 'text-slate-100' }}">
                 <div class="flex justify-start items-start">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                      </svg> 
-                        <div class="ml-2">                     
-                            Login
-                        </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
+                    <div>                     
+                        Login
+                    </div>
                 </div>
             </a>
         </div>

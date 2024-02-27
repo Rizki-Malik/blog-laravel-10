@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
-    <title>Rizki Malik - Blog | {{ $title }}</title>
+    <title>Kode Qwerty - Blog | {{ $title }}</title>
+    <link rel="icon" href="/img/icon.png" type="image/png">
 </head>
 <body>
     <header class="bg-[#50C4ED]">
