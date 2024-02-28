@@ -15,11 +15,12 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         return view('dashboard.posts.index', [
             "title" => "Dashboard",
             "logo_nav" => "/img/logo-white-dashboard.png",
             "image" => "pp.png",
-            "posts" => Post::where('user_id', auth()->user()->id)->paginate(10),
+            "posts" => Post::where('user_id', auth()->user()->id)->filter(request(['search-admin']))->paginate(10)->WithQueryString(),
         ]);
     }
 

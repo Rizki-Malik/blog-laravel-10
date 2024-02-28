@@ -31,7 +31,7 @@ Route::get('/about', function () {
     return view('about', [
         "name" => "Muhammad Rizki Malik Aziz",
         "email" => "rimali.qwerty@gmail.com",
-        "image" => "img/pp.png",
+        "image" => "img/malik.png",
         "logo_nav" => "img/logo-white.png",
         "logo" => "img/logo.png",
         "title" => "Tentang",

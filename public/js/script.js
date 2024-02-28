@@ -29,12 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
 function confirmDelete() {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
-            confirmButton: "btn btn-success",
-            cancelButton: "btn btn-danger"
+            confirmButton: "bg-green-500 p-2 mx-2 text-white rounded-lg",
+            cancelButton: "bg-red-500 p-2 mx-2 text-white rounded-lg"
         },
         buttonsStyling: false
     });
@@ -49,19 +48,13 @@ function confirmDelete() {
         reverseButtons: true
     }).then((result) => {
         if (result.isConfirmed) {
-            swalWithBootstrapButtons.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-            });
-            // Add your logic for actual deletion here, like an AJAX request or a form submission
+            document.getElementById("deleteForm").submit();
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             swalWithBootstrapButtons.fire({
                 title: "Cancelled",
-                text: "Your imaginary file is safe :)",
+                text: "Your data is safe :)",
                 icon: "error"
             });
         }
     });
 }
-

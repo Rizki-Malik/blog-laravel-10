@@ -20,7 +20,7 @@
                         <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                             <div class="w-full">
                                 <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
-                                <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 @error('title') dark:border-red-500 @enderror" placeholder="Type title" required autofocus value="{{ old('title') }}">
+                                <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500 @error('title') dark:border-red-500 @enderror" placeholder="Type title" required autofocus value="{{ old('title') }}">
                                 @error('title')
                                     <div class="my-1 text-red-500">{{ $message }}</div>
                                 @enderror
@@ -37,14 +37,14 @@
                             </div>
                             <div class="w-full">
                                 <label for="slug" class="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-500">Slug</label>
-                                <input type="text" name="slug" id="slug" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-slate-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 @error('slug') dark:border-red-500 @enderror" placeholder="Type slug" required readonly {{ old('slug') }}>
+                                <input type="text" name="slug" id="slug" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-slate-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500 @error('slug') dark:border-red-500 @enderror" placeholder="Type slug" required readonly {{ old('slug') }}>
                                 @error('slug')
                                     <div class="my-1 text-red-500">{{ $message }}</div>                                    
                                 @enderror
                             </div>
                             <div>
                                 <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                                <select id="category" name="category_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <select id="category" name="category_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}"  {{ old('category_id') == $category->id ? ' selected' : '' }}>{{ $category->name }}</option>
                                     @endforeach
@@ -61,7 +61,7 @@
                                 <textarea id="body" name="body" class="h-full" value="{{ old('body') }}"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white dark:bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 dark:hover:bg-primary-800">
+                        <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white dark:bg-sky-700 rounded-lg focus:ring-4 focus:ring-sky-200 dark:focus:ring-sky-900 dark:hover:bg-sky-800">
                             Create post
                         </button>
                     </form>
